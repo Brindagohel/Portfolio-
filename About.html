@@ -4,120 +4,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About- Brinda Gohel</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+
+     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+
+        html, body{
+            width: 100%;
+            height: 100%;
+            background: #0e0e0e;
+            font-family: 'Times New Roman', Times, serif;
+            color: #f5f5f5;
+
+        }
+
+        .about-page{
+            min-height: calc(100vh - 40px);
+            padding: 25px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .top-title{
+            margin-bottom: 20px;
+        }
+        .sec-label{
+            color: #c9a84c;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform:uppercase;
+            margin-bottom: 6px;
+        
+        }
+        .main-heading{
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .gold{
+            color: #c9a84c;
+        }
+        .heading-line{
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg,#c9a84c,#e8c97a);
+            border-radius: 20px;
+        }
+        .about-grid{
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 20px;
+            flex: 1;   
+        }
+        .left-side,
+        .right-side{
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .card-box{
+            background: #181818;
+            border:1px solid rgba(201,168,76,0.18);
+            border-radius:16px;
+            padding:20px;
+        }
+        .intro{
+            display:flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .avatar{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg,#c9a84c,#e8c97a);
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .intro h3{
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .small-text{
+            font-size: 0.82rem;
+            color:#9b948b;
+            margin: 10px;
+        }
+        .intro p{
+            font-size: 0.088rem;
+            line-height: 1.7;
+            color: #d0c8bc;
+        }
+        .mini-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+        .mini-card h5{
+            color: #c9a84c;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        .mini-card ul{
+            padding-left: 18px;
+        }
+        .mini-card li{
+            margin-bottom: 7px;
+            color: #c8c0b4;
+            font-size: 0.85rem;
+        }
+        .goal-card{
+            border-left: 3px solid #c9a84c;
+
+        }
+        .goal-card h6{
+            color: #c9a84c;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+        .goal-card p{
+            font-size: 0.86rem;
+            color: #d0c8bc;
+            line-height: 1.7;
+            margin: 0;
+        }
+        .edu-item{
+            margin-bottom: 14px;
+
+        }
+        .edu-year{
+            color: #c9a84c;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .edu-degree{
+            font-size: 0.92rem;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+        .edu-school{
+            font-size: 0.82rem;
+            color: #8a8278;
+        }
+
+        @media(max-width:992px){
+            html,body{
+                overflow: auto;
+            }
+            .about-page{
+                height: auto;
+            }
+            .about-grid{
+                grid-template-columns: 1fr;
+            }
+            .mini-grid{
+                grid-template-columns: 1fr;
+            }
+        }
+         .fade-up { opacity:0; transform:translateY(20px); animation:fadeUp 0.6s ease forwards; }
+         @keyframes fadeUp { to { opacity:1; transform:none; } }
+        .d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}
+     </style>
 </head>
 <body>
-    <main>
-        <section>
-            <h1>Aboute Me</h1>
-            <hr>
+    <div class="about-page">
+        <div class="top-title">
+            <p class="sec-label">Get TO Know Me</p>
+            <h1 class="main-heading">
+                About <span class="gold">Me</span>
+            </h1>
+            <div class="heading-line"></div>
+        </div>
+        <div class="about-grid">
+            <div class="left-side">
+                <div class="card-box intro fade-up d1">
+                    <div class="avatar">BG</div>
+                    <div>
+                        <h3>Brinda<span class="gold">Gohel</span></h3>
+                        <div class="small-text">
+                            <i class="bi bi-geo-alt"></i>
+                            Bhavnagar,Gujarat
+                            &nbsp;&nbsp;
+                            <i class="bi bi-mortarboard"></i>
+                            B.E IT
+                        </div>
 
-            <section>
-                <h2>Personal Introduction</h2>
-                <p>
-                     Hi! I am Brinda Gohel, an aspiring Full Stack Developer and 
-                     B.E. Information Technology student from Bhavnagar, Gujarat, India.
-                </p>
-                <p>
-                    I am a motivated, hardworking and passionate individual who loves
-                    building things on the web. I have hands on experience in web 
-                    development, Android, .NET, data analytics and IoT through 
-                    multiple internships.
-                </p>
-                <p>
-                   I am also recognised as a <strong>Google Student Ambassador</strong> 
-                   and certified in <strong>Google Gemini 2.0</strong>, which has 
-                   helped me develop strong leadership, communication and 
-                   practical AI tool skills 
-                </p>
-            </section>
+                        <p>Aspiring Full Stack Developer with experience in web development, android ,iot and ai tools
+                            Passions about building modern,responsive and user-friendly applications
+                        </p>
+                    </div>
+                </div>
 
-            <hr>
+                <div class="mini-grid">
+                    <div class="card-box mini-card fade-up d2">
+                        <h5>Achievements</h5>
 
-            <section>
-                <h2>Educational Background</h2>
+                        <ul>
+                            <li>Google Student Ambassodar</li>
+                            <li>Gemini 2.0 certified</li>
+                            <li>+3 tech internships</li>
+                            <li>web & android projects</li>
+                        </ul>
+                    </div>
 
-                <h3>B.E in Information Technology</h3>
-                <p><strong>Shantilal shah Engineering College ,Gujarat</strong></p>
-                <p>2024- Present</p>
-                <p>
-                    Currently pursuring my undergraduate degree with a focus on sotware
-                    engineering , database and full satck development.
-                </p>
+                    <div class="card-box mini-card fade-up d3">
+                        <h5>Interests</h5>
+                        <ul>
+                            <li>Full Stack Development</li>
+                            <li>Artificial Intelligence</li>
+                            <li>React Development</li>
+                            <li>Cloud & Database</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-                <br>
-                
-                <h3>Diploma in Information Technology</h3>
-                <p><strong>Sir Bhavsinhji Polytchnic Institue ,Gujarat</strong></p>
-                <p>2021-2024</p>
-                <p>
-                    Completed a 3 year diploma covering programming fundamentals,
-                    netwoeking, database managment system and software development.
-                </p>
-            </section>
+            <div class="right-side">
+                <div class="card-box fade-up d1">
+                    <h5 style="color:#c9a84c ; margin-bottom: 16px;"> Education</h5>
+                    <div class="edu-item">
+                        <div class="edu-year">2024 -Present</div>
+                        <div class="edu-degree">B.E Information Technology</div>
+                        <div class="edu-school">
+                            Shantilal shah engineering college
+                        </div>
+                    </div>
 
-            <hr>
+                    <div class="edu-item">
+                        <div class="edu-year">2021 -2024</div>
+                        <div class="edu-degree">Diploma In It</div>
+                        <div class="edu-school">
+                            Sir Bhavsinhji Polytechnic Institute
+                        </div>
+                    </div>
 
-            <section>
-               <h2>Current Studies</h2>
-               <p>
-                Along with my B.E degree I am currently focusing on 
-                building my skills in full stack web development.
-                I practice coding every day and work on small projects 
-                to strengthen my understanding.
-               </p>
-            </section>
+                    <div class="card-box goal-card fade-up d1">
+                        <h6>
+                            <i class="bi bi-bullseye me-2"></i>
+                            Career Goal
+                        </h6>
+                        <p>To become a successful fill stack developer and work on real-world applications
+                            using modern technologies while continuously learning and improving my skills.
+                        </p>
+                    </div>
 
-            <hr>
+                    <div class="card-box mini-card fade-up d2">
+                        <h5>Availability</h5>
 
-            <section>
-                <h2>Interests in Technology</h2>
-                 <p>
-                    I have a Strong intrest in technologies and like to exploring
-                    different areas of software development.
-                    here are the areas that excite me the most:
-                 </p>
-                 <ul>
-                    <li>Fullsatck development</li>
-                    <li>Artificial Intelligence</li>
-                    <li>React</li>
-                 </ul>
+                        <ul>
+                            <li>Internship Opportunities</li>
+                            <li>Freelance Projects</li>
+                            <li>Remote & on-site work</li>
+                        </ul>
+                    </div>
 
-            </section>
-
-            <hr>
-
-            <section>
-                <h2>Gols</h2>
-
-                <h3>Short Term Goal</h3>
-
-                <p>
-                    My short term goal is to complete this internship successfully and 
-                    gain real hands on experience in web development. I want to master 
-                    <strong>HTML</strong>, <strong>CSS</strong> and 
-                    <strong>JavaScript</strong> completely and start learning a modern 
-                    frontend framework like <strong>React</strong> to build beautiful 
-                    and responsive user interfaces.
-                </p>
-
-                <h3>Long Trem Goal</h3>
-                <p>
-                    I want to work in a reputed tech company as a Full Stack Developer 
-                    where I can contribute to real world projects, keep learning 
-                    modern technologies and grow as a professional developer every 
-                    single day.
-                </p>
-            </section>
-
-            <section>
-                <br>
-                <p align="center">@Copyright 2026 Brinda Gohel . All rights reserved</p>
-                <br>
-
-            </section>
-
-        </section>
-    </main>
+                </div>
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>

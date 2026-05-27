@@ -3,74 +3,375 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills - Brinda Gohel</title>
+    <title>Skills | Brinda Gohel</title>
+
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+
+     <style>
+        body { background :#0e0e0e;}
+
+        .section-wrap{
+            padding: 80px 0;
+        }
+
+        .sec-label{
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #c9a84c;
+        }
+
+        .section-heading{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #f0ece4;
+            margin-bottom: 12px;
+        }
+
+        .section-heading{
+            background: linear-gradient(135deg,#c9a84c,#e8c97a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tool-badge i { color:#c9a84c;}
+
+        .skill-cat-card{
+            background: #1c1c1c;
+            border: 1px solid rgba(201,168,76,0.18);
+            border-radius: 16px;
+            height: 100%;
+            padding: 28px;
+            transition: transform 0.3s , border-color 0.3s;
+        }
+        .skill-cat-card:hover{
+            transform: translateY(-4px);
+            border-color: rgba(201,168,76,0.4);
+        }
+        .cat-icon{
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            background: rgba(201,168,76,0.1);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem;
+            color: #c9a84c;
+            margin-bottom: 16px;
+
+        }
+        .cat-title{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #f0ece4;
+            margin-bottom: 20px;
+        }
+
+        .skill-bar-wrap{margin-bottom: 16px;}
+        .skill-bar-label{
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.83rem;
+            color: #c8c0b4;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+        .skill-pct{ color: #c9a84c ; font-weight: 600; }
+        .bar-bg{
+            background: #2a2a2a;
+            border-radius: 50px;
+            height: 7px;
+            overflow:  hidden;
+        }
+        .bar-fill{
+            height: 7px;
+            border-radius: 50px;
+            background:  linear-gradient(90deg , #c9a84c , #e8c97a);
+            width: 0;
+            transition: width 1.3s cubic-bezier(0.4 ,0 ,0.2,1);
+        }
+
+        .tool-badge{
+            background:  rgba(201,168,76,0.08);
+            border : 1px solid rgba(201,168,76,0.2);
+            color: #c8c0b4;
+            font-size: 0.8rem;
+            padding: 6px 14px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition:  all 0.25s;
+            margin: 4px;
+        }
+        .tool-badge:hover{
+            background: rgba(201,168,76,0.18);
+            border-color:  rgba(201,168,76,0.5);
+            color: #e8c97a;
+            transform: translate(-2px);
+        }
+        .tool-badge i { color:#c9a84c; font-size: 0.9rem;}
+
+        .soft-pill{
+            background: #222;
+            border:1px solid rgba(201,168,76,0.2);
+            border-radius: 12px;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition:  all 0.25s;
+        
+        }
+        .soft-pill:hover{
+            border-color:  rgba(201,168,76,0.5);
+            background: #2a2a2a;
+        }
+        .soft-pill i { font-size: 1.2rem; color: #c9a84c;}
+        .soft-pill span { font-size: 0.88rem; color: #c8c0b4; font-weight: 500; }
+        .sec-label{
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .fade-up{ opacity: 0; transform: translateY(20px); animation: fadeUp 0.6s ease forwards;}
+
+        @keyframes fadeUp { to {opacity: 1; transform: none;}}
+        .d1{animation-delay : .1s;} .d2{animation-delay : .2s;} .d3{animation-delay : .3s;}
+         .d4{animation-delay : .4s;}  .d5{animation-delay : .5s;}  .d6{animation-delay : .6s;}
+     </style>
+
 </head>
 <body>
-       <main>
-            <section>
-                <h1>My Skills</h1>
+    <div class="section-wrap">
+        <div class="container">
+            <div class="mb-5 fade-up">
+                <p class="sec-label">What I Know</p>
+                <h2 class="section-heading">My <span class="gold-text">Skills</span></h2>
+                <div class="heading-bar"></div>
+            </div>
+      <div class="row g-4 mb-4">
 
-                <hr>
+       <div class="row g-4 mb-4">    <div class="col-lg-6 fade-up d1">
+        <div class="skill-cat-card">
 
-                <article>
-                    <h2>Frontend Development</h2>
-                    <ul>
-                        <li>HTML5 - Structuring web page using semantic elemnts</li>
-                        <li>Css - Styling and designing responsive web pages</li>
-                        <li>JavaScript - Adding interactivity to web pages</li>
-                    </ul>
-                </article>
+            <div class="cat-icon">
+                <i class="bi bi-layout-text-window"></i>
+            </div>
 
-                <hr>
+            <p class="cat-title">Frontend Development</p>
 
-                <article>
-                    <h2>Backend Development</h2>
-                    <ul>
-                        <li>Java- core backend programing language</li>
-                        <li>.Net - building modules and business logic</li>
-                    </ul>
-                </article>
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-label">
+                    <span>
+                        <i class="bi bi-filetype-html me-2" style="color:#c9a84c;"></i>
+                        HTML5
+                    </span>
 
-                <hr>
-                
-                <article>
-                    <h2>Database</h2>
-                    <ul>
-                        <li>MySql- relational database managment</li>
-                        <li>FireBase- cloud based data storage</li>
-                        <li>MongoDB - basic understanding of noSql database</li>
-                    </ul>
-                </article>
+                    <span class="skill-pct">90%</span>
+                </div>
 
-                <hr>
+                <div class="bar-bg">
+                    <div class="bar-fill" data-width="90"></div>
+                </div>
+            </div>
 
-                <article>
-                    <h2>Tools and Technologies</h2>
-                    <ul>
-                        <li>Vs Code</li>
-                        <li>Android Studio</li>
-                        <li>Git - Version Control</li>
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-label">
+                    <span>
+                        <i class="bi bi-filetype-css me-2" style="color:#c9a84c;"></i>
+                        CSS3 / Bootstrap
+                    </span>
+
+                    <span class="skill-pct">85%</span>
+                </div>
+
+                <div class="bar-bg">
+                    <div class="bar-fill" data-width="85"></div>
+                </div>
+            </div>
+
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-label">
+                    <span>
+                        <i class="bi bi-filetype-js me-2" style="color:#c9a84c;"></i>
+                        JavaScript
+                    </span>
+
+                    <span class="skill-pct">75%</span>
+                </div>
+
+                <div class="bar-bg">
+                    <div class="bar-fill" data-width="75"></div>
+                </div>
+            </div>
+
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-label">
+                    <span>
+                        <i class="bi bi-arrow-repeat me-2" style="color:#c9a84c;"></i>
+                        React (Learning)
+                    </span>
+
+                    <span class="skill-pct">45%</span>
+                </div>
+
+                <div class="bar-bg">
+                    <div class="bar-fill" data-width="45"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <div class="col-lg-6 fade-up d2">
+        <div class="skill-cat-card">
+
+            <div class="cat-icon">
+                <i class="bi bi-server"></i>
+            </div>
+
+            <p class="cat-title">Backend Development</p>
+
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-label">
+                    <span>
+                        <i class="bi bi-cup-hot me-2" style="color:#c9a84c;"></i>
+                        Java
+                    </span>
+
+                    <span class="skill-pct">75%</span>
+                </div>
+
+                <div class="bar-bg">
+                    <div class="bar-fill" data-width="75"></div>
+                </div>
+            </div>
+
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-label">
+                    <span>
+                        <i class="bi bi-microsoft me-2" style="color:#c9a84c;"></i>
+                        .NET Framework
+                    </span>
+
+                    <span class="skill-pct">50%</span>
+                </div>
+
+                <div class="bar-bg">
+                    <div class="bar-fill" data-width="50"></div>
+                </div>
+            </div>
+
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-label">
+                    <span>
+                        <i class="bi bi-phone me-2" style="color:#c9a84c;"></i>
+                        Android Development
+                    </span>
+
+                    <span class="skill-pct">70%</span>
+                </div>
+
+                <div class="bar-bg">
+                    <div class="bar-fill" data-width="70"></div>
+                </div>
+            </div>
+
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-label">
+                    <span>
+                        <i class="bi bi-wifi me-2" style="color:#c9a84c;"></i>
+                        IoT
+                    </span>
+
+                    <span class="skill-pct">50%</span>
+                </div>
+
+                <div class="bar-bg">
+                    <div class="bar-fill" data-width="50"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+
+        <div class="row g-4 mb-4">
+            <div class="col-lg-6 fade-up d3">
+                <div class="skill-cat-card">
+                    <div class="cat-icon"><i class="bi bi-database-fill"></i></div>
+                    <p class="cat-title">Databases</p>
+
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar-label">
+                            <span><i class="bi bi-table m2-2" style="color:#c9a84c;"></i>MySQL</span>
+                            <span class="skill-pct">80%</span>
+                        </div>
+                        <div class="bar-bg"><div class="bar-fill" data-width="80"></div></div>
+                    </div>
+                        <div class="skill-bar-wrap">
+                        <div class="skill-bar-label">
+                            <span><i class="bi bi-collection m2-2" style="color:#c9a84c;"></i>MongoDB</span>
+                            <span class="skill-pct">50%</span>
+                        </div>
+                        <div class="bar-bg"><div class="bar-fill" data-width="50"></div></div>
+                    </div>
+
+                        <div class="skill-bar-wrap">
+                        <div class="skill-bar-label">
+                            <span><i class="bi bi-cloud-fill m2-2" style="color:#c9a84c;"></i>Firebase</span>
+                            <span class="skill-pct">50%</span>
+                        </div>
+                        <div class="bar-bg">
+                            <div class="bar-fill" data-width="50"></div>
+                       </div>
+                    </div>
+                </div>
+            </div>  
+            
+
+            <div class="col-lg-6 fade-up d4">
+                <div class="skill-cat-card">
+                    <div class="cat-icon"><i class="bi bi-tools"></i></div>
+                    <p class="cat-title">Tools &amp ; Technologies</p>
+                    
+                    <div class="d-flex flex-wrap">
+                        <span class="tool-badge"><i class="bi bi-code-square"></i>VsCode</span>
+                        <span class="tool-badge"><i class="bi bi-phone"></i>Android Studio</span>
+                        <span class="tool-badge"><i class="bi bi-git m2-2" style="color:#c9a84c;"></i>Git</span>
+                        <span class="tool-badge"><i class="bi bi-github m2-2" style="color:#c9a84c;"></i>GitHub</span>
+                        <span class="tool-badge"><i class="bi bi-bootstrap m2-2" style="color:#c9a84c;"></i>Bootstrap</span>
+                        <span class="tool-badge"><i class="bi bi-google m2-2" style="color:#c9a84c;"></i>Google Cloud</span>
+                        <span class="tool-badge"><i class="bi bi-cpu m2-2" style="color:#c9a84c;"></i>Android Iot</span>
+                        <span class="tool-badge"><i class="bi bi-bar-chart m2-2" style="color:#c9a84c;"></i>Data Analysis</span>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+                    
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+           <script>
+            window.addEventListener('load',()=>{
+                setTimeout(()=>{
+                    document.querySelectorAll('.bar-fill').forEach(bar=>{
                       
-                    </ul>
-                </article>
+                        bar.style.width= bar.dataset.width + '%';   
+                    });
+                },300);
+            });
+           </script>
 
-                <hr>
-
-                <article>
-                    <h2>Soft Skills</h2>
-                    <ul>
-                        <li>Public Speaking</li>
-                        <li>Presentation Skills</li>
-                        <li>Team Leadership</li>
-                    </ul>
-                </article>
-
-                <hr>
-
-               
-            </section>
-        </main>
-   
     
 </body>
 </html>
